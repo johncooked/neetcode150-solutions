@@ -5,7 +5,7 @@
 const containsDuplicate = function (nums) {
     let res = false;
 
-    nums.sort();
+    nums.sort(); // This causes the algorithm to be slower. Typically O(n log n)
 
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] === nums[i + 1]) {
