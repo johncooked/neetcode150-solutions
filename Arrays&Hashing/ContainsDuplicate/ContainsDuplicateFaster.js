@@ -3,17 +3,9 @@
  * @return {boolean}
  */
 const containsDuplicate = function (nums) {
-    let res = false;
+    const numsSet = new Set(nums);
 
-    nums.sort();
-
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === nums[i + 1]) {
-            res = true;
-        }
-    }
-
-    return res;
+    return numsSet.size != nums.length;
 };
 
 // Test case 1
